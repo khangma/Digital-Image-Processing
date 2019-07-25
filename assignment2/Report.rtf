@@ -1,0 +1,16 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Austin Ma\
+UH ID 1386739\
+Assignment 2 report:\
+\
+binary_image.py:\
+	In this file, I have implemented the functions to create a histogram, use that histogram to find the optimal threshold, and turning the image into a binary image. The first problem I ran into is when I code for the compute_histogram method. In the beginning, I followed the simple procedure of scanning through the image and increment the values that are present by one in the array. I thought I was done. However, I moved on to find_optimal_threshold and I find that I cannot calculate the probability without the original size of the image and it would be too much to calculate that using the histogram. I decided to calculate the probability and put that in the histogram. I think I might have misunderstood what a histogram stands for. But it put me on the right track. I was able to compute the threshold. It took a lot of tinkering with the ints and floats value to get the do-while loop to work properly. I started with an int threshold. After taking the expected values and calculate the new threshold, I wanted it to be float. However, in the end I return the threshold as an int. Binarize only took a few minutes. I was confused about whether I should make the blobs white or black. I then looked at the sample picture and made my decision.\
+\
+cell_counting.py:\
+	It is hard to implement blob coloring because I have prior knowledge to how dictionary in Python works. I tried to follow instructions in the lecture notes but it did not work for me. I keep getting KeyError. I asked the instructor and he said I did not have to use the dictionary. So I decided to use a list of list to accomplish that task. I can say that the blob_coloring method is done. I printed it out and it did print out different regions with different numbers. Now I have to calculate the statistics. I cannot figure out how to compute the statistics using the regions.}
